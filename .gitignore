@@ -22,3 +22,23 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# ===== Angular (toll-ui) =====
+
+ATPS/Front_End/toll-ui/node_modules/
+ATPS/Front_End/toll-ui/dist/
+ATPS/Front_End/toll-ui/.angular/
+ATPS/Front_End/toll-ui/.tmp/
+ATPS/Front_End/toll-ui/out-tsc/
+
+ATPS/Front_End/toll-ui/npm-debug.log*
+ATPS/Front_End/toll-ui/yarn-debug.log*
+ATPS/Front_End/toll-ui/yarn-error.log*
+
+ATPS/Front_End/toll-ui/.vscode/
+ATPS/Front_End/toll-ui/.idea/
+
+ATPS/Front_End/toll-ui/.env
+ATPS/Front_End/toll-ui/.env.local
+
+ATPS/Front_End/toll-ui/*.log

@@ -1,0 +1,29 @@
+<div class="container min-vh-100 min-vw-100 bg-image">
+    <div class="row justify-content-center">
+        <div class="mt-4 card p-4 col-md-5 bg-black">
+
+            <h3 class="text-center mt-2 mb-4 text-white" >Add Vehicle</h3>
+            
+                <form [formGroup]="addVehicleForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group margin-bottom-2 text-white mb-3">
+                        <label >User ID <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" formControlName="userId" placeholder="Enter User Id">
+                    </div>
+                    <div class="form-group margin-bottom-2 text-white mb-3">
+                        <label >VehicleNumber<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" formControlName="vehicleNumber" placeholder="Enter Vehicle Number">
+                    </div>
+                    <div class="form-group margin-bottom-2 text-white mb-3">
+                        <label >Vehicle Type <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" formControlName="vehicleType" placeholder="Enter Vehicle Type">
+                    </div>
+                    <div class="form-group margin-bottom-2 text-white mb-3">
+                        <label >Model <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" formControlName="model" placeholder="Enter Model">
+                    </div>
+
+                    <button type="button" class="btn btn-primary">Add Vehicle</button>
+                </form>
+        </div>
+    </div>
+</div>
