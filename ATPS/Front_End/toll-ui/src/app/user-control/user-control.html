@@ -1,0 +1,65 @@
+<div class="container-fluid bg-light min-vh-100 p-3">
+
+    <!-- Content Area -->
+  <div class="card shadow-sm p-4 text-center">
+    <h5>Select an option from Vehicle or Wallet menu</h5>
+  </div>
+
+  <!-- Top Bar -->
+  <div class="d-flex justify-content-evenly mt-5 mb-5">
+
+    <!-- Vehicle Dropdown -->
+    <div class="dropdown me-3">
+      <button
+        class="btn btn-primary dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+        🚗 Vehicle
+      </button>
+
+      <ul class="dropdown-menu">
+        <li>
+          <a class="dropdown-item" type="button" routerLink="/addVehicle">
+            ➕ Add Vehicle
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" type="button">
+            👁 View Vehicle
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Wallet Dropdown -->
+    <div class="dropdown">
+      <button
+        class="btn btn-success dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+        💰 Wallet
+      </button>
+
+      <ul class="dropdown-menu">
+        <li>
+          <a class="dropdown-item" type="button">
+            💵 Wallet Balance
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" type="button">
+            🔄 Recharge Wallet
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" type="button">
+            📜 Transaction History
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
