@@ -2,7 +2,8 @@ FROM maven:3.9.9-eclipse-temurin-21 AS build
 
 WORKDIR /build
 
-COPY . .
+COPY ATPS/Back_End/discovery-server/pom.xml pom.xml
+COPY ATPS/Back_End/discovery-server/src src
 
 RUN mvn clean package -DskipTests
 
