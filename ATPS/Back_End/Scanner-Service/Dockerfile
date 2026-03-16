@@ -1,14 +1,19 @@
-# Use Java 21 image
-FROM openjdk:21-jdk-slim
+FROM maven:3.9.9-eclipse-temurin-21 AS build
 
-# Set working directory
+WORKDIR /build
+
+COPY ATPS/Back_End/Scanner-Service/pom.xml pom.xml
+COPY ATPS/Back_End/Scanner-Service/src src
+
+RUN mvn clean package -DskipTests
+
+
+FROM eclipse-temurin:21-jdk-jammy
+
 WORKDIR /app
 
-# Copy jar file from target folder
-COPY target/*.jar app.jar
+COPY --from=build /build/target/*.jar app.jar
 
-# Expose port (change if needed)
 EXPOSE 8085
 
-# Run jar
 ENTRYPOINT ["java","-jar","app.jar"]
