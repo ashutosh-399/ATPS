@@ -4,6 +4,7 @@ import { UserControl } from './user-control/user-control';
 import { TollControl } from './toll-control/toll-control';
 import { VehicleControl } from './vehicle-control/vehicle-control';
 import { AddVehicle } from './add-vehicle/add-vehicle';
+import { WalletBalance } from './wallet-balance/wallet-balance';
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'vehicleControl',
     component: VehicleControl
+  },
+  {
+    path: 'walletBalance',
+    component: WalletBalance
   }
   
 

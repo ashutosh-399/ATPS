@@ -13,6 +13,7 @@ import { UserControl } from './user-control/user-control';
 import { TollControl } from './toll-control/toll-control';
 import { VehicleControl } from './vehicle-control/vehicle-control';
 import { AddVehicle } from './add-vehicle/add-vehicle';
+import { WalletBalance } from './wallet-balance/wallet-balance';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AddVehicle } from './add-vehicle/add-vehicle';
     UserControl,
     TollControl,
     VehicleControl,
-    AddVehicle
+    AddVehicle,
+    WalletBalance
   ],
   imports: [
     BrowserModule,
