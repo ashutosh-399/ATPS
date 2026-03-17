@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  userServiceUrl: 'https://your-production-api.com'
+  userServiceUrl: 'https://user-service-78n9.onrender.com'
 };
