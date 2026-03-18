@@ -1,0 +1,82 @@
+<div class="container mt-4">
+    <h3 class="text-center mb-4">View Vehicle Details</h3>
+
+  <!-- Search by User ID -->
+
+    <div class="card p-3 mb-4 shadow-sm">
+        <h5>Search by User ID</h5>
+        <div class="mb-3">
+            <label class="form-label">User ID</label>
+            <input type="number" class="form-control" placeholder="Enter User ID"
+            [(ngModel)] = "userId" name="userId">
+        </div>
+        <button class="btn btn-primary" (click)="getByUserId()">Get Vehicle By User ID</button>
+    </div>
+
+    <!-- Search by Vehicle Number -->
+
+    <div class="card p-3 shadow-sm">
+        <h5>Search by Vehicle Number</h5>
+        <div class="mb-3">
+            <label class="form-label">Vehicle Number</label>
+            <input type="text" class="form-control" placeholder="Enter Vehicle Number" [(ngModel)] = vehicleNumber name = vehicleNumber>
+        </div>
+        <button class="btn btn-success" (click)="getByVehicleNumber()">Get Vehicle By Vehicle Number</button>
+    </div>
+
+    <!-- Display Vehicle Details -->
+
+    <hr>
+    @if(vehicleList.length > 0){
+        <h5 class="mt-5">Vehicle Details</h5>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User ID</th>
+                    <th>Vehicle Number</th>
+                    <th>Vehicle Type</th>
+                    <th>Model</th>
+                    <th>Tag ID</th>					
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of vehicleList; track $index) {
+                    <tr>
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.userId }}</td>
+                        <td>{{ item.vehicleNumber }}</td>
+                        <td>{{ item.vehicleType }}</td>
+                        <td>{{ item.model }}</td>
+                        <td>{{ item.tagId }}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    @if (vehicle) {
+        <h5 class="mt-5">Vehicle Details</h5>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User ID</th>
+                    <th>Vehicle Number</th>
+                    <th>Vehicle Type</th>
+                    <th>Model</th>
+                    <th>Tag ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ vehicle.id }}</td>
+                    <td>{{ vehicle.userId }}</td>
+                    <td>{{ vehicle.vehicleNumber }}</td>
+                    <td>{{ vehicle.vehicleType }}</td>
+                    <td>{{ vehicle.model }}</td>
+                    <td>{{ vehicle.tagId }}</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>

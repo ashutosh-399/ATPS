@@ -11,6 +11,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/vehicles")
+@CrossOrigin(origins = {
+        "http://localhost:4200",
+        "https://fluffy-selkie-7f14d3.netlify.app"
+})
 public class VehicleController {
 
     @Autowired

@@ -5,5 +5,7 @@ export const environment = {
   //userServiceUrl: 'https://user-service-78n9.onrender.com'
 
   //For Localhost server
-  userServiceUrl: 'http://localhost:8081'
+  userServiceUrl: 'http://localhost:8081',
+
+  vehicleServiceUrl: 'http://localhost:8082'
 };
