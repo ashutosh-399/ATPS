@@ -5,6 +5,7 @@ import { TollControl } from './toll-control/toll-control';
 import { VehicleControl } from './vehicle-control/vehicle-control';
 import { AddVehicle } from './add-vehicle/add-vehicle';
 import { WalletBalance } from './wallet-balance/wallet-balance';
+import { ViewVehicle } from './user-control/view-vehicle/view-vehicle';
 
 const routes: Routes = [
   {
@@ -22,7 +23,7 @@ const routes: Routes = [
   },
   {
     path: 'userControl',
-    component: UserControl
+    component: UserControl,
   },
   {
     path: 'tollControl',
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'addVehicle',
     component: AddVehicle
+  },
+  {
+    path: 'viewVehicle',
+    component: ViewVehicle
   },
   {
     path: 'vehicleControl',

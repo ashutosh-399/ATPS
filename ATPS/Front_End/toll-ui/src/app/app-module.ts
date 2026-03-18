@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Login } from './auth/login/login';
 import { Home } from './dashboard/home/home';
 import { Signup } from './auth/signup/signup';
@@ -14,6 +14,7 @@ import { TollControl } from './toll-control/toll-control';
 import { VehicleControl } from './vehicle-control/vehicle-control';
 import { AddVehicle } from './add-vehicle/add-vehicle';
 import { WalletBalance } from './wallet-balance/wallet-balance';
+import { ViewVehicle } from './user-control/view-vehicle/view-vehicle';
 
 @NgModule({
   declarations: [
@@ -24,14 +25,16 @@ import { WalletBalance } from './wallet-balance/wallet-balance';
     TollControl,
     VehicleControl,
     AddVehicle,
-    WalletBalance
+    WalletBalance,
+    ViewVehicle
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterLink
+    RouterLink,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()
